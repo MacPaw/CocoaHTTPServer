@@ -47,8 +47,7 @@
 				HTTPLogVerbose(@"MultipartFormDataParser: Processed Header field '%@'",field.name);
 			}
 			else {
-				NSString* fieldStr = [[NSString  alloc] initWithData:fieldData encoding:NSASCIIStringEncoding];
-				HTTPLogWarn(@"MultipartFormDataParser: Failed to parse MIME header field. Input ASCII string:%@",fieldStr);
+				HTTPLogWarn(@"MultipartFormDataParser: Failed to parse MIME header field. Input ASCII string:%@",[[NSString  alloc] initWithData:fieldData encoding:NSASCIIStringEncoding]);
 			}
 
 			// move to the next header field
